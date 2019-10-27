@@ -10,7 +10,7 @@
 <body>
 	<header>
 		<nav class="my-navbar">
-			<a href="/" class="my-navbar-brand"></a>
+			<a href="/" class="my-navbar-brand">ToDo App</a>
 		</nav>
 	</header>
 	<main>
