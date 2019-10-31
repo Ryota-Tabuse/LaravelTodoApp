@@ -2,8 +2,7 @@
 @extends('layout')
 
 @section('styles')
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-	<link rel="stylesheet" href="https://npmcdn.com/flatpicker/dist/themes/material_blue.css">
+	@include('share.flatpicker.styles')
 @endsection
 
 @section('content')
@@ -26,7 +25,7 @@
 								<label for="title">タイトル</label>
 							<input type="text" class="form-control" name="title" id="title" value="{{old('title')}}">
 							</div>
-							<div class="form-grouop">
+							<div class="form-group">
 								<label for="sue_date">期限</label>
 							<input type="text" class="form-control" name="sue_date" id="sue_date" value="{{old('sue_date')}}">
 							</div>
@@ -42,13 +41,5 @@
 @endsection
 
 @section('scripts')
-  <script src="https://npmcdn.com/flatpickr/dist/flatpickr.min.js"></script>
-  <script src="https://npmcdn.com/flatpickr/dist/l10n/ja.js"></script>
-  <script>
-    flatpickr(document.getElementById('sue_date'), {
-      locale: 'ja',
-      dateFormat: "Y/m/d",
-      minDate: new Date()
-    });
-  </script>
+	@include('share.flatpicker.scripts')
 @endsection

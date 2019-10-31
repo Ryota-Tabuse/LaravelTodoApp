@@ -55,7 +55,7 @@ class Task extends Model
 	 * 整形した期限日
 	 * @return string
 	 */
-	public function getFormattedDateAttribute()
+	public function getFormattedSueDateAttribute()
 	{
 		return Carbon::createFromFormat('Y-m-d', $this->attributes['sue_date'])
 			->format('Y/m/d');
